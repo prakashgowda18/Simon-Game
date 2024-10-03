@@ -51,4 +51,16 @@
     box-shadow: 0 0 20px white;
     background-color: grey;
   }
-  
+  #start{
+    height: 100px;
+    width: 300px;
+    border: 10px solid black;
+    border-radius: 15%;
+    background-color: greenyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+  }
+  footer{
+    color: azure;
+    font-family: 'Press Start 2P', cursive;
+  }
