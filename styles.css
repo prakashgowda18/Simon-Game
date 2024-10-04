@@ -63,4 +63,17 @@
   footer{
     color: azure;
     font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
   }
+  footer a{
+    text-decoration: none;
+    
+  }
+  #start:hover{
+    cursor: pointer;
+  }
+  .btn:hover{
+    cursor: pointer;
+  }
+
+  
