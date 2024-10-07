@@ -8,7 +8,9 @@ var level = 0;
 
 $("#start").click(function() {
   if (!started) {
-    $("#start").prop("disabled", true); // Disable the start button when the game starts
+    $("#start").addClass("pressed");
+    $("#start").prop("disabled", true);
+     // Disable the start button when the game starts
     $("#level-title").text("Level - " + level);
     nextSequence();
     started = true;
@@ -92,5 +94,6 @@ function startOver() {
   started = false;
   
   // Re-enable the start button when the game is over
+  $("#start").removeClass("pressed");
   $("#start").prop("disabled", false);
 }

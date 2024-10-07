@@ -70,7 +70,10 @@
     
   }
   #start:hover{
-    cursor: pointer;
+    cursor:pointer;
+  }
+  #start.pressed:hover{
+    cursor: not-allowed;
   }
   .btn:hover{
     cursor: pointer;
