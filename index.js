@@ -8,6 +8,7 @@ var level = 0;
 
 $("#start").click(function() {
   if (!started) {
+    $("#start").prop("disabled", true); // Disable the start button when the game starts
     $("#level-title").text("Level - " + level);
     nextSequence();
     started = true;
@@ -51,7 +52,7 @@ function checkAnswer(currentLevel) {
 
       $("#level-title").text("Game Over, Press START button to Restart");
 
-      //2. Call startOver() if the user gets the sequence wrong.
+      // Call startOver() if the user gets the sequence wrong.
       startOver();
     }
 
@@ -83,11 +84,13 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-//1. Create a new function called startOver().
+// Create a new function called startOver().
 function startOver() {
-
-  //3. Inside this function, need to reset the values of level, gamePattern and started variables.
+  // Reset the values of level, gamePattern, and started variables.
   level = 0;
   gamePattern = [];
   started = false;
+  
+  // Re-enable the start button when the game is over
+  $("#start").prop("disabled", false);
 }
